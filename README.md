@@ -45,3 +45,39 @@ height | number | 400 | Height of the chart.
 width | number | 600 | Width of the chart.
 left | number | 100 | Distance of Y-axis from the chart's left position.
 bottom | number | 50 | Distance of X-axis from the chart's bottom position.
+showBarValue | boolean | true | Display the values on the bar
+showRuler | boolean | true | Display background ruler
+xAxis | object | | Consist multiple properties mentioned below
+text | string | 'X-Axis' | X-Axis' text
+textFontSize | number | 12 | Font size of X-Axis' text
+plotValue | array | empty | X-Axis' values
+plotValueFontSize | number | 12 | Font size of X-Axis's text
+yAxis | object | | Consist multiple properties mentioned below
+text | string | 'Y-Axis' | Y-Axis' text
+textFontSize | number | 12 | Font size of Y-Axis' text
+plotValue | array | [] | Y-Axis' values
+plotValueFontSize | number | 12 | Font size of Y-Axis's text
+plotValueDifference | number | 100 | difference between each value
+minBarVal | number | empty | Minimum value to plot on Y-Axis. This will round off to it's nearest `plotValueDifference` value less than `minBarVal`, that is, if the `minBarVal` mentioned is `120` and the `plotValueDifference` is `50` it will round of to `minBarVal`'s nearest 50 which is 100.
+maxBarVal | number | empty | Maximum value to plot on Y-Axis. This will round off to it's nearest `plotValueDifference` value greater than `maxBarVal`, that is, if the `maxBarVal` mentioned is `540` and the `plotValueDifference` is `50` it will round of to `maxBarVal`'s nearest 50 which is 500.
+
+
+### Bar chart Example
+
+m('#line-chart').barChart({
+	height: 400,
+	width:600,
+	left:50,
+	bottom:50,
+	maxBarVal:140,
+	minBarVal:0,
+	xAxis: {
+		text: 'Year',
+		plotValue: [1951,1961,1971,1981,1991,2001,2011],
+	},
+	yAxis: {
+		text: 'Population in Crore',
+    	plotValueDifference: 20,
+		plotValue: [36.11,43.93,54.82,68.33,84.64,102.87,121.07],
+	},
+});
