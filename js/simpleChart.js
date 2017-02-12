@@ -17,8 +17,6 @@ Version 1.0.0
         width: 600,
         left: 100,
         bottom: 50,
-        minBarVal: Number(),
-        maxBarVal: Number(),
         type: 'simple',
         showBarValue: true,
         showRuler: true,
@@ -35,6 +33,8 @@ Version 1.0.0
             plotValueDifference: 100,
             plotValue: Array(),
             suffix:'',
+            minBarVal: Number(),
+            maxBarVal: Number(),
         },
     };
     /* Default pieOptions */
@@ -153,18 +153,18 @@ Version 1.0.0
                 newYaxisValues = [],
                 yAxisDiffMentioned = false;
             /* Check If min and max value is set or no*/
-            if((barOpt.maxBarVal >= barOpt.minBarVal)
-                && ((barOpt.maxBarVal + barOpt.minBarVal) > barYaxisDiff)) {
+            if((barOpt.yAxis.maxBarVal >= barOpt.yAxis.minBarVal)
+                && ((barOpt.yAxis.maxBarVal + barOpt.yAxis.minBarVal) > barYaxisDiff)) {
                 /* Throw error if:
                 minimum y-axis value specified is more than the min value of y-axis array
                 maximum y-axis value specified is less than the max value of y-axis array*/
-                if(Math.min.apply(null, barOpt.yAxis.plotValue) < barOpt.minBarVal
-                    || Math.max.apply(null, barOpt.yAxis.plotValue) > barOpt.maxBarVal) {
+                if(Math.min.apply(null, barOpt.yAxis.plotValue) < barOpt.yAxis.minBarVal
+                    || Math.max.apply(null, barOpt.yAxis.plotValue) > barOpt.yAxis.maxBarVal) {
                     throw 'Minimum or Maximum value of Y-Axis is incorrect';
                 } else{
                     yAxisDiffMentioned = true;
-                    minYvalue = Math.floor(barOpt.minBarVal / barYaxisDiff) * barYaxisDiff;
-                    maxYvalue = Math.ceil(barOpt.maxBarVal / barYaxisDiff) * barYaxisDiff;
+                    minYvalue = Math.floor(barOpt.yAxis.minBarVal / barYaxisDiff) * barYaxisDiff;
+                    maxYvalue = Math.ceil(barOpt.yAxis.maxBarVal / barYaxisDiff) * barYaxisDiff;
                 }
             } else{
                 minYvalue = Math.floor((Math.min.apply(null, barOpt.yAxis.plotValue) / barYaxisDiff)) * barYaxisDiff;
