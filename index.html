@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chart</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.min.css"  media="all">
+</head>
+<body>
+	<div id="line-chart">
+	</div>
+	<div id="pie-chart">
+	</div>
+	<script src="js/script.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		m('#line-chart').barChart({
+			height: 400,
+			width:600,
+			left:50,
+			bottom:50,
+			maxBarVal:140,
+			minBarVal:0,
+			xAxis: {
+				text: 'Year',
+				plotValue: [1951,1961,1971,1981,1991,2001,2011],
+			},
+			yAxis: {
+				text: 'Population in Crore',
+            	plotValueDifference: 20,
+        		plotValue: [36.11,43.93,54.82,68.33,84.64,102.87,121.07],
+			},
+		});
+		m('#pie-chart').pieChart({
+				height: 300,
+				width: 400,
+				radius:60,
+       			legendWidth: 160,
+       			showPercent: false,
+       			legendTitle: 'Popular Social Media',
+				plotValue:[
+					{
+						title: 'Facebook',
+						number: 1790000000,
+						bgColor: '#4e71a8',
+					},
+					{
+						title: 'YouTube',
+						number: 1000000000,
+						bgColor: '#ca3737',
+					},
+					{
+						title: 'Instagram',
+						number: 500000000,
+						bgColor: '#e03666',
+					},
+					{
+						title: 'Twitter',
+						number: 313000000,
+						bgColor: '#1cb7eb',
+					},
+					{
+						title: 'Reddit',
+						number: 234000000,
+						bgColor: '#ff4500',
+					},
+					{
+						title: 'Vine',
+						number: 200000000,
+						bgColor: '#00bf8f',
+					},
+				]
+			});
+	</script>
+</body>
+</html>
