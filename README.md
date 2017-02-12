@@ -39,6 +39,6 @@ For Pie Chart, before closing `<body>` tag add:
 #### Bar Chart
 Note: Do not add any unit for number properties, it will by default consider it as pixles.
 * `height` (number) : Height of the chart.
-* `weight` (number) : Weight of the chart. Do not add any unit, it will by default consider it as pixles.
-* `left` (number) : Distance of Y-axis from the chart's left position. Do not add any unit, it will by default consider it as pixles.
-* `bottom` (number) : Distance of X-axis from the chart's bottom position. Do not add any unit, it will by default consider it as pixles.
+* `weight` (number) : Weight of the chart.
+* `left` (number) : Distance of Y-axis from the chart's left position.
+* `bottom` (number) : Distance of X-axis from the chart's bottom position.
