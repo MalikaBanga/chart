@@ -90,7 +90,7 @@ Note: Do not add any unit for number properties, it will by default consider it 
 Options | Type | Default | Description
 ------ | ---- | ------- | -----------
 height | number | 280 | Height of the chart.
-width | number | 280 | Width of the chart.
+width | number | 800 | Width of the chart.
 radius | number | 70 | Radius of the sectors(pie).
 plotValue | array | [{}] | Consists of objects in an array. Following are the properties of the object:
 title | string | 'Default' | Title of a single sector in the pie.
@@ -107,8 +107,8 @@ m('#pie-chart').pieChart({
 	height: 300,
 	width: 400,
 	radius:60,
-		legendWidth: 160,
-		legendTitle: 'Popular Social Media',
+	legendWidth: 160,
+	legendTitle: 'Popular Social Media',
 	plotValue:[
 		{
 			title: 'Facebook',
