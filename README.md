@@ -102,7 +102,7 @@ legendWidth | number | 100 | Width of the legend
 
 
 #### Pie chart Example
-![Alt text](/chart/pie.jpg?raw=true "Pie Chart displaying social media usage")
+![Pie Chart](https://raw.githubusercontent.com/MalikaBanga/chart/screenshots/pie.jpg)
 ```
 m('#pie-chart').pieChart({
 	height: 300,
