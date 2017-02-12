@@ -102,7 +102,7 @@ legendWidth | number | 100 | Width of the legend
 
 
 #### Pie chart Example
-![Pie Chart](https://raw.githubusercontent.com/MalikaBanga/chart/screenshots/pie.jpg)
+[![PieChart](https://raw.githubusercontent.com/MalikaBanga/chart/screenshots/pie.jpg)]
 ```
 m('#pie-chart').pieChart({
 	height: 300,
