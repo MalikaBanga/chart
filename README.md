@@ -63,6 +63,7 @@ maxBarVal | number | empty | Maximum value to plot on Y-Axis. This will round of
 
 
 #### Bar chart Example
+https://raw.githubusercontent.com/MalikaBanga/chart/screenshots/chart.jpg
 ```
 m('#line-chart').barChart({
 	height: 400,
@@ -102,7 +103,7 @@ legendWidth | number | 100 | Width of the legend
 
 
 #### Pie chart Example
-[![PieChart](https://raw.githubusercontent.com/MalikaBanga/chart/screenshots/pie.jpg)]
+https://raw.githubusercontent.com/MalikaBanga/chart/screenshots/pie.jpg
 ```
 m('#pie-chart').pieChart({
 	height: 300,
