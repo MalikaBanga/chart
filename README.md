@@ -55,7 +55,7 @@ plotValueFontSize | number | 12 | Font size of X-Axis's text
 yAxis | object | | Consist multiple properties mentioned below
 text | string | 'Y-Axis' | Y-Axis' text
 textFontSize | number | 12 | Font size of Y-Axis' text
-plotValue | array | [] | Y-Axis' values
+plotValue | array | empty | Y-Axis' values
 plotValueFontSize | number | 12 | Font size of Y-Axis's text
 plotValueDifference | number | 100 | difference between each value
 minBarVal | number | empty | Minimum value to plot on Y-Axis. This will round off to it's nearest `plotValueDifference` value less than `minBarVal`, that is, if the `minBarVal` mentioned is `120` and the `plotValueDifference` is `50` it will round of to `minBarVal`'s nearest 50 which is 100.
@@ -63,7 +63,7 @@ maxBarVal | number | empty | Maximum value to plot on Y-Axis. This will round of
 
 
 ### Bar chart Example
-
+```
 m('#line-chart').barChart({
 	height: 400,
 	width:600,
@@ -81,3 +81,4 @@ m('#line-chart').barChart({
 		plotValue: [36.11,43.93,54.82,68.33,84.64,102.87,121.07],
 	},
 });
+```
