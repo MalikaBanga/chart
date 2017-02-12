@@ -41,7 +41,6 @@ Note: Do not add any unit for number properties, it will by default consider it 
 
 Options | Type | Default | Description
 ------ | ---- | ------- | -----------
-accessibility | boolean | true | Enables tabbing and arrow key navigation
 height | number | 400 | Height of the chart.
 width | number | 600 | Width of the chart.
 left | number | 100 | Distance of Y-axis from the chart's left position.
