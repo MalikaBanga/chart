@@ -62,7 +62,7 @@ minBarVal | number | empty | Minimum value to plot on Y-Axis. This will round of
 maxBarVal | number | empty | Maximum value to plot on Y-Axis. This will round off to it's nearest `plotValueDifference` value greater than `maxBarVal`, that is, if the `maxBarVal` mentioned is `540` and the `plotValueDifference` is `50` it will round of to `maxBarVal`'s nearest 50 which is 500.
 
 
-### Bar chart Example
+#### Bar chart Example
 ```
 m('#line-chart').barChart({
 	height: 400,
@@ -80,5 +80,66 @@ m('#line-chart').barChart({
     	plotValueDifference: 20,
 		plotValue: [36.11,43.93,54.82,68.33,84.64,102.87,121.07],
 	},
+});
+```
+
+
+#### Pie Chart
+Note: Do not add any unit for number properties, it will by default consider it as pixles.
+
+Options | Type | Default | Description
+------ | ---- | ------- | -----------
+height | number | 280 | Height of the chart.
+width | number | 280 | Width of the chart.
+radius | number | 70 | Radius of the sectors(pie).
+plotValue | array | [{}] | Consists of objects in an array. Following are the properties of the object:
+title | string | 'Default' | Title of a single sector in the pie.
+number | number | 100 | Value of a single sector in the pie.
+bgColor | string | 'green' | Background color of a single sector in the pie.
+showLegend | boolean | true | Display legend of the chart
+legendTitle | string | '' | Title of the legend
+legendWidth | number | 100 | Width of the legend
+
+
+#### Pie chart Example
+```
+m('#pie-chart').pieChart({
+	height: 300,
+	width: 400,
+	radius:60,
+		legendWidth: 160,
+		legendTitle: 'Popular Social Media',
+	plotValue:[
+		{
+			title: 'Facebook',
+			number: 1790000000,
+			bgColor: '#4e71a8',
+		},
+		{
+			title: 'YouTube',
+			number: 1000000000,
+			bgColor: '#ca3737',
+		},
+		{
+			title: 'Instagram',
+			number: 500000000,
+			bgColor: '#e03666',
+		},
+		{
+			title: 'Twitter',
+			number: 313000000,
+			bgColor: '#1cb7eb',
+		},
+		{
+			title: 'Reddit',
+			number: 234000000,
+			bgColor: '#ff4500',
+		},
+		{
+			title: 'Vine',
+			number: 200000000,
+			bgColor: '#00bf8f',
+		},
+	]
 });
 ```

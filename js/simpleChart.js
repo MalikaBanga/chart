@@ -47,8 +47,6 @@ Version 1.0.0
             number: 100,
             bgColor: 'green'
         }, ],
-        showPercent: true,
-        showTooltip: false,
         showLegend: true,
         legendTitle: '',
         legendWidth: 100,
@@ -345,9 +343,6 @@ Version 1.0.0
                                 'stroke-dashoffset="' + pieOffest + '"' +
                                 'stroke="' + valuesArr[i].bgColor + '">' +
                              '</circle>';
-                if (pieOpt.showPercent) {
-                    circleSVG += '<text class="pie-percent-value"  x="150" y="150">' + eachPercent + '%</text>';
-                }
 
             }
             /* Insert the pies in the svg group*/
