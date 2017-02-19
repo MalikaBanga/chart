@@ -145,3 +145,6 @@ m('#pie-chart').pieChart({
 	]
 });
 ```
+
+## Live Demo
+https://malikabanga.github.io/work/chart/
